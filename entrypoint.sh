@@ -43,11 +43,11 @@ cd "${GITHUB_WORKSPACE}"
 
 # Set post's update date to the timestamp of the most recent Git commit
 
-find source/_posts -name "*.md" | while read file; do
-  timestamp=$(git log -1 --format="%ct" "$file")
-  formatted_timestamp=$(date -u -d "@$timestamp" "+%Y%m%d%H%M.%S")
-  touch -t "$formatted_timestamp" "$file"
-done
+# find source/_posts -name "*.md" | while read file; do
+#   timestamp=$(git log -1 --format="%ct" "$file")
+#   formatted_timestamp=$(date -u -d "@$timestamp" "+%Y%m%d%H%M.%S")
+#   touch -t "$formatted_timestamp" "$file"
+# done
 
 
 echo ">_ Install NPM dependencies ..."
